@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>202e823f-d776-43fa-95c6-7873ccc14502</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>
+    </StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>TensorFlowIntroduction</Name>
+    <RootNamespace>TensorFlowIntroduction</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="dropout_demo.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="finetuning_demo.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HelloWorld.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LeNet\tf_LeNet.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MiniBatch\mini_batch_demo.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MiniBatch\tf_mini_batch_demo.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="multilayer_perceptron_demo.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="tf_cnn_demo.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="tf_cnn_quiz_33.py" />
+    <Compile Include="tf_cnn_quiz_31.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="tf_cross_entropy_demo.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="tf_input_demo.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TF_LinearFunction\quiz.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TF_LinearFunction\sandbox.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="tf_relu_demo.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="tf_save_load_demo.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="tf_softmax_demo.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="tf_math_demo.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="image\" />
+    <Folder Include="MiniBatch\" />
+    <Folder Include="LeNet\" />
+    <Folder Include="TF_LinearFunction\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="image\learn_rate_tune.png" />
+    <Content Include="image\mean_variance.png" />
+    <Content Include="image\notmnist.png" />
+    <Content Include="image\weight_biases.png" />
+    <Content Include="lab.ipynb" />
+    <Content Include="LeNet\LeNet-Lab-Solution.ipynb" />
+    <Content Include="LeNet\LeNet-Lab.ipynb" />
+    <Content Include="LeNet\lenet.png" />
+    <Content Include="LeNet\README.md" />
+    <Content Include="README.MD" />
+    <Content Include="solutions.ipynb" />
+  </ItemGroup>
+  <Import Condition="Exists($(PtvsTargetsFile))" Project="$(PtvsTargetsFile)" />
+  <Import Condition="!Exists($(PtvsTargetsFile))" Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
